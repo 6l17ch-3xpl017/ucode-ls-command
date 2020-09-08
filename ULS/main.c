@@ -21,5 +21,15 @@ int main(int argc, char **argv) {
 //
 //    stat("../test_dir/c_file.cpp", &buf);
 
+    int count = 0;
+    while (1)
+    {
+        printf("Hello\n");
+        write(2, "a\n", 1);
+
+        while((count += 1) != 10);
+        break;
+    }
+
     return 0;
 }

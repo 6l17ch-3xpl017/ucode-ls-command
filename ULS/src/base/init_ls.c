@@ -29,14 +29,13 @@ static t_request *parse_line(int argc, char **argv) {
     return request;
 }
 
-int print(t_request *request) {
-    DIR *base_dir = opendir(request->start_path);
-    struct dirent *pDirent;
+int print_files(t_request *request) {
 
-    for (int i = 0; (pDirent = readdir(base_dir)) != NULL;) {
-        if (pDirent->d_type == DT_REG)
-            if (linear_search(pDirent->d_name, request->files))
-                printf("%s", request->files[i]);
+    struct stat stat_buf;
+
+    for (int i = 0; request->files[i]; i++)
+    {
+        stat(request->files[i], &stat_buf);
     }
 
     return 0;
@@ -44,6 +43,6 @@ int print(t_request *request) {
 
 int run(int argc, char **argv) {
     t_request *request = parse_line(argc, argv);
-    print(request);
+//    print(request);
     return 0;
 }
