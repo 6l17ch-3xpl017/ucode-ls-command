@@ -29,16 +29,25 @@ static t_request *parse_line(int argc, char **argv) {
     return request;
 }
 
-int print_files(t_request *request) {
+static int print_files(t_request *request) {
 
     struct stat stat_buf;
 
     for (int i = 0; request->files[i]; i++)
-    {
-        stat(request->files[i], &stat_buf);
-    }
+        if (stat(request->files[i], &stat_buf) != 0)
+            printf("uls: %s: %s", request->files[i], strerror(errno));
+
+    for (int i = 0; request->files[i]; i++)
+        printf("%s", request->files[i]);
 
     return 0;
+}
+
+static int print_dir(t_request *request) {
+
+    for (int i = 0; request->dirs[i] ; i++) {
+
+    }
 }
 
 int run(int argc, char **argv) {
