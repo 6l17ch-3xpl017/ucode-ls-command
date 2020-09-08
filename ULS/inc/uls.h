@@ -16,6 +16,8 @@
 #include <sys/uio.h>
 #else
 #include <sys/io.h>
+#include <sys/types.h>
+#include <attr/xattr.h>
 #endif
 #include <sys/stat.h>
 //#include <sys/acl.h>

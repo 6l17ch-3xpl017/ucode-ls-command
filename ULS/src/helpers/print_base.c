@@ -22,6 +22,7 @@ int print_base(char *dir_path)
      * ToDo: ls == CMakeLists.txt  cmake-build-debug  inc  main.c  src  test
      * ToDo: Test this
      */
+    DT_REG
 
     return 0;
 }
