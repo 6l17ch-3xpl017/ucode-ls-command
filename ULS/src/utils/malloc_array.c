@@ -1,8 +1,7 @@
 #include "uls.h"
 
 //ToDo: Rename this method
-char **malloc_array(size_t size)
-{
+char **malloc_array(size_t size) {
     char **array = malloc(size);
 
     for (int i = 0; i <= size; i++)

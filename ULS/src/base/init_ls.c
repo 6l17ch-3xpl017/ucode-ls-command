@@ -1,7 +1,6 @@
 #include "uls.h"
 
-static t_request *parse_line(int argc, char **argv)
-{
+static t_request *parse_line(int argc, char **argv) {
     t_request *request = malloc(sizeof(t_request));
     request->files = malloc(argc); // ToDo: Use more advance method
     request->dirs = malloc(argc); // ToDo: Use more advance method
@@ -10,35 +9,41 @@ static t_request *parse_line(int argc, char **argv)
     int flags_count = 0;
     int dir_path_count = 0;
 
-    for (int i = 1; i != argc; i++)
-    {
-        if (argv[i][0] == '-')
-        {
+    for (int i = 1; i != argc; i++) {
+        if (argv[i][0] == '-') {
             request->flags[flags_count] = malloc(strlen(argv[i]));
             strcpy(request->flags[flags_count++], argv[i]);
             continue;
-        }
-        else
-        {
-          if (is_dir(argv[i]))
-          {
-            request->dirs[dir_path_count] = malloc(strlen(argv[i]));
-            strcpy(request->dirs[dir_path_count], argv[i]);
-            continue;
-          }
-          else if (is_file(argv[i]))
-          {
-            request->files[dir_path_count] = malloc(strlen(argv[i]));
-            strcpy(request->dirs[dir_path_count], argv[i]);
-          }
+        } else {
+            if (is_dir(argv[i])) {
+                request->dirs[dir_path_count] = malloc(strlen(argv[i]));
+                strcpy(request->dirs[dir_path_count], argv[i]);
+                continue;
+            } else if (is_file(argv[i])) {
+                request->files[dir_path_count] = malloc(strlen(argv[i]));
+                strcpy(request->files[dir_path_count], argv[i]);
+            }
         }
     }
 
     return request;
 }
 
-int run(int argc, char **argv)
-{
+int print(t_request *request) {
+    DIR *base_dir = opendir(request->start_path);
+    struct dirent *pDirent;
+
+    for (int i = 0; (pDirent = readdir(base_dir)) != NULL;) {
+        if (pDirent->d_type == DT_REG)
+            if (linear_search(pDirent->d_name, request->files))
+                printf("%s", request->files[i]);
+    }
+
+    return 0;
+}
+
+int run(int argc, char **argv) {
     t_request *request = parse_line(argc, argv);
+    print(request);
     return 0;
 }
