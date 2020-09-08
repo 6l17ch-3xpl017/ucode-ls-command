@@ -55,7 +55,7 @@ int run(int argc, char **argv);
 
 /* Utils */
 int count_in_dir(char *dir_path, int d_type);
-
+char *cutter(char * string, char separator, int a);
 char **malloc_array(size_t size);
 
 

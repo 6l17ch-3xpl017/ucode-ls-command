@@ -1,6 +1,3 @@
-//
-// Created by Иван on 08-Sep-20.
-//
 #include "uls.h"
 
 char *cutter(char * string, char separator, int a) {
