@@ -8,7 +8,7 @@
 //		 * The -1, -C, -x and -l options all override each other so
 //		 * shell aliasing works right.
 //		 */
-// ToDo: /* Root is -A automatically. */
+// ToDo: Add last sort option to main struct
 
 int main(int argc, char **argv) {
     //ToDo:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ********** !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
