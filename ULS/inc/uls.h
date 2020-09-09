@@ -39,6 +39,8 @@ enum {
 #define DT_ALL        DT_ALL
 };
 
+//const char *valid_flags[] = {"l", "a", "R"};
+//const char *valid_options[] = {"color", "hello", "bye"};
 /* Prototypes */
 
 /* Helpers */
@@ -51,6 +53,8 @@ bool is_file(char *filename);
 bool linear_search(char *word, char **array);
 
 void check_args(int argc, char **argv);
+
+void check_flags(t_request *request);
 
 /* Base */
 int run(int argc, char **argv);
