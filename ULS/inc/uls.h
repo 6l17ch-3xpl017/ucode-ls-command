@@ -28,9 +28,9 @@
 /* Structures */
 typedef struct s_request {
     char *start_path;
-    char files[4096][256];
-    char dirs[4096][256];
-    char flags[4096][256];
+    char files[4096][4096];
+    char dirs[4096][4096];
+    char flags[4096][4096];
 } t_request;
 
 /* Defines */
