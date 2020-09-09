@@ -1,6 +1,6 @@
 #include "uls.h"
 
-void check_files_and_dir(int argc, char **argv)
+void check_args(int argc, char **argv)
 {
     struct stat stat_buf;
 

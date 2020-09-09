@@ -1,11 +1,21 @@
 #include "uls.h"
 
+
+// ToDo: Terminal defaults to -Cq, non-terminal defaults to -1. Make logic for terminal output and non-terminal
+// ToDo: /* The -d option turns off the -R option. */
+// ToDo: /* The -c and -u options override each other. */
+// ToDo: /*
+//		 * The -1, -C, -x and -l options all override each other so
+//		 * shell aliasing works right.
+//		 */
+// ToDo: /* Root is -A automatically. */
+
 int main(int argc, char **argv) {
     //ToDo:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ********** !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //ToDo:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Close pDir !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //ToDo:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ********** !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//    argv[0] = cutter(argv[0], '/', 2)                   ToDo: Change 2 to 1
-//    run(argc, argv);
+    argv[0] = cutter(argv[0], '/', 2);                   //ToDo: Change 2 to 1
+    run(argc, argv);
 //    if (argc == 1)
 //    {                           //ToDo: Create Struct
 //                                //ToDo: Check Errors
@@ -21,15 +31,4 @@ int main(int argc, char **argv) {
 //
 //    stat("../test_dir/c_file.cpp", &buf);
 
-    int count = 0;
-    while (1)
-    {
-        printf("Hello\n");
-        write(2, "a\n", 1);
-
-        while((count += 1) != 10);
-        break;
-    }
-
-    return 0;
 }

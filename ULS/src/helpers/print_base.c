@@ -14,7 +14,7 @@ int print_base(char *dir_path) {                          //ToDo: Check Errors
     //ToDo: Sort array ?
     for (int i = 0; file_and_folders[i] != NULL; i++)
         if (file_and_folders[i][0] != '.')
-            printf("%s ", file_and_folders[i]);
+            printf("%s  ", file_and_folders[i]);
 
     /*
      * ToDo: Why uls == cmake-build-debug CMakeLists.txt inc main.c src test !=

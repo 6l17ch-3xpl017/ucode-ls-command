@@ -28,9 +28,9 @@
 /* Structures */
 typedef struct s_request {
     char *start_path;
-    char **files;
-    char **dirs;
-    char **flags;
+    char files[4096][256];
+    char dirs[4096][256];
+    char flags[4096][256];
 } t_request;
 
 /* Defines */
@@ -49,6 +49,8 @@ bool is_dir(char *filename);
 bool is_file(char *filename);
 
 bool linear_search(char *word, char **array);
+
+void check_args(int argc, char **argv);
 
 /* Base */
 int run(int argc, char **argv);
