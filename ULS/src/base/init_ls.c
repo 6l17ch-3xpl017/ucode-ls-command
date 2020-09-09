@@ -52,8 +52,9 @@ int run(int argc, char **argv)
 {
     check_args(argc, argv);
     t_request *request = parse_line(argc, argv);
-    print_files_base(request);
-    print_dir_base(request);
+    check_flags(request);
+//    print_files_base(request);
+//    print_dir_base(request);
 
     return 0;
 }
