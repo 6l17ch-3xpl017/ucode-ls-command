@@ -2,6 +2,15 @@
 
 static t_request *parse_line(int argc, char **argv) {
     t_request *request = malloc(sizeof(t_request));
+    for (int i = 0; i < 256; i++) {
+        request->dirs[i][0] = '\0';
+    }
+    for (int i = 0; i < 256; i++) {
+        request->files[i][0] = '\0';
+    }
+    for (int i = 0; i < 256; i++) {
+        request->flags[i][0] = '\0';
+    }
 //    request->files = malloc(argc); // ToDo: Use more advance method  ToDo: /* Use realloc */
 //    request->dirs = malloc(argc); // ToDo: Use more advance method         /* file is static char array[4096][256] */
 //    request->flags = malloc(argc); // ToDo: Use more advance method        /* dirs and flag same */
@@ -10,6 +19,8 @@ static t_request *parse_line(int argc, char **argv) {
     int dir_path_count = 0;
     int files_count = 0;
 
+
+    // ToDo: add check len
     for (int i = 1; i != argc; i++) {
         if (argv[i][0] == '-')
             strcpy(request->flags[flags_count++], argv[i]);
