@@ -11,6 +11,7 @@
 #include <unistd.h>  //*
 #include <fcntl.h>   //*
 #include <stdbool.h> //*
+#include <stdlib.h>  //*
 //*******************//*
 #ifdef __APPLE__
 #include <sys/uio.h>
