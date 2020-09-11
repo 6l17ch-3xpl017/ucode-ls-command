@@ -8,6 +8,15 @@ typedef enum e_error {
     ERR_DIR,
 }            t_error;
 
+typedef struct s_time
+{
+    char *day_of_week;
+    char *month;
+    char *day;
+    char *time;
+    char *year;
+}              t_time;
+
 typedef struct s_file {
     char *name;              // full file name, example ./src/main.c
     char *print_name;        // short file name, example main.c

@@ -1,5 +1,5 @@
 #include "uls.h"
-
+#include "prototypes.h"
 
 // ToDo: Terminal defaults to -Cq, non-terminal defaults to -1. Make logic for terminal output and non-terminal
 // ToDo: /* The -d option turns off the -R option. */
@@ -22,21 +22,23 @@ int main(int argc, char **argv) {
 //    printf ("lines %d\n", w.ws_row);
 //    printf ("columns %d\n\n", w.ws_col);
 
-    if (argc == 1)
-    {                           //ToDo: Create Struct
-                                //ToDo: Check Errors
-                                //ToDo: Change working dir
-        print_base(".");
-    } //ToDo: check flag or path // Make line parser
-    else if (argc == 2 && argv[1][0] != '-')
-    {
-        print_base(argv[1]);
-    }
-    else
-    {
-        argv[0] = cutter(argv[0], '/', 2);                   //ToDo: Change 2 to 1
-        run(argc, argv);
-    }
+    print_l(argv[1]);
+
+//    if (argc == 1)
+//    {                           //ToDo: Create Struct
+//                                //ToDo: Check Errors
+//                                //ToDo: Change working dir
+//        print_base(".");
+//    } //ToDo: check flag or path // Make line parser
+//    else if (argc == 2 && argv[1][0] != '-')
+//    {
+//        print_base(argv[1]);
+//    }
+//    else
+//    {
+//        argv[0] = cutter(argv[0], '/', 2);                   //ToDo: Change 2 to 1
+//        run(argc, argv);
+//    }
 
 //    struct stat buf;
 
