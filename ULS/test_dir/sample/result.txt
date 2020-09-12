@@ -1,0 +1,8 @@
+file1  file2  file3
+
+dir1:
+A.txt  D.txt  G.txt  J.txt  M.txt  P.txt  S.txt  V.txt	Y.txt
+B.txt  E.txt  H.txt  K.txt  N.txt  Q.txt  T.txt  W.txt	Z.txt
+C.txt  F.txt  I.txt  L.txt  O.txt  R.txt  U.txt  X.txt
+
+dir2:

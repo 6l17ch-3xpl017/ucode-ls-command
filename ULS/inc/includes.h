@@ -2,7 +2,7 @@
 #define ULS_INCLUDES_H
 
 #include "libmx.h"
-// ToDo: add info for inputs
+// ToDo: add info for includes
 #include <dirent.h>
 #include <time.h>
 #include <sys/stat.h>

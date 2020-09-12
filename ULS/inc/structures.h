@@ -2,7 +2,6 @@
 #define ULS_STRUCTURES_H
 
 #include "includes.h"
-#include "prototypes.h"
 
 typedef enum e_error {
     ERR_EACCES,
@@ -30,7 +29,7 @@ typedef struct s_file {
     int file_major;
 }              t_file;
 
-typedef struct s_ls_l_data {
+typedef struct s_l_data {
     bool st;
     int max_uid;
     int max_gid;
@@ -46,10 +45,10 @@ typedef struct s_main {
     t_file **files_struct;
     char *flags;
     bool color;
-    int str_size;
+    int files_count;
     int file_n;
     int terminal_width;
-    bool out_in_terminal;
+    bool is_term;
 }              t_main;
 
 #endif //ULS_STRUCTURES_H

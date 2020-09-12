@@ -2,7 +2,7 @@
 
 int print_base(char *dir_path) {                          //ToDo: Check Errors
     struct dirent *pDirent;
-    char **file_and_folders = malloc_array(
+    char **file_and_folders = malloc_char_array(
             count_in_dir(dir_path, DT_ALL)); // ToDo: Make method to malloc file_and_folders array
     DIR *pDir = opendir(dir_path);
 

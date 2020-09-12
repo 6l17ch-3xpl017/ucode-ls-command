@@ -61,12 +61,11 @@ void check_args(int argc, char **argv);
 void check_flags(t_request *request);
 
 /* Base */
-int run(int argc, char **argv);
+//int run(int argc, char **argv);
 
 /* Utils */
-int count_in_dir(char *dir_path, int d_type);
 char *cutter(char * string, char separator, int a);
-char **malloc_array(size_t size);
+char **malloc_char_array(size_t size);
 
 
 #endif //ULS_ULS_H

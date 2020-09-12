@@ -1,6 +1,12 @@
 #include "uls.h"
 
-char *init_flags(char **argv, int argc)
+/**
+ * Function initialize flags to one string of flags
+ * @param argv arguments from main
+ * @param argc quantity of arguments
+ * @return string of flags in argv
+ */
+char *init_flags(int argc, char **argv)
 {
     char *flags = NULL;
     char *temp = NULL;
