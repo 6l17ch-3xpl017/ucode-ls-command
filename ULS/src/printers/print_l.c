@@ -65,14 +65,12 @@ void print_l(t_file **files, t_main *main)
 {
     t_ls_l_data *print_struct = init_ls_data(files, main);
     char *time_str = NULL;
-    char *temp = NULL;
 
     if (print_struct->check_dir)
         print_total(files, main->files_count);
 
-    for (int i = 0; i < main->files_count i++) {
+    for (int i = 0; i < main->files_count; i++) {
         print_l_more(files[i], print_struct);
-        temp = ctime(&files[i]->mtime);
         time_str = get_time_str(files[i], print_struct);
         mx_printstr(time_str);
         mx_printstr(" ");
