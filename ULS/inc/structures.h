@@ -25,6 +25,8 @@ typedef struct s_file {
     long int mtime;
     long int ctime;
     ino_t ino;
+    int file_minor;
+    int file_major;
 }              t_file;
 
 typedef struct s_l_data {

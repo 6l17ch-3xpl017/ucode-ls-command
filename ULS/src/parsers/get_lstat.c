@@ -90,8 +90,8 @@ t_file *get_lstat(const char *file)
     new_file_s->mtime = buf_l.st_mtime;
     new_file_s->ctime = buf_l.st_ctime;
     new_file_s->ino = buf_l.st_ino;
-//    new_file_s->file_major = major(buf_l.st_rdev);
-//    new_file_s->file_minor = minor(buf_l.st_rdev);
+    new_file_s->file_major = major(buf_l.st_rdev);
+    new_file_s->file_minor = minor(buf_l.st_rdev);
 
     return new_file_s;
 }
