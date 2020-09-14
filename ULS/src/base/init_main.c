@@ -3,7 +3,7 @@
 
 static char *add_flag(int argc, char **argv)
 {
-    char *temp_flags = init_flags(argv, argc);
+    char *temp_flags = init_flags(argc, argv);
     char *flags = NULL;
     char *str = mx_strjoin(LS_VALID_STR_ONE, LS_VALID_STR_TWO);
 

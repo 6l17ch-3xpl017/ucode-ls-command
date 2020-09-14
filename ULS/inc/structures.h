@@ -9,24 +9,22 @@ typedef enum e_error {
 }            t_error;
 
 typedef struct s_file {
-    char *name;              // full file name, example ./src/main.c
-    char *print_name;        // short file name, example main.c
-    char *acl_inf;           // needed for flag l (additional information)
-    char type;               // file type
-    char color;              // file color
-    unsigned short int mode; // from it we get permissions and file type
-    long long int size;      // size in bytes
-    unsigned int nlink;      // number of file links needed for flag l
-    char *uid_name;          // user name
-    char *gid_name;          // group name
-    int blksize;             // number of occupied blocks (in bytes)
-    long long int blocks;    // number of occupied blocks (in blocks)
-    long int atime;          // last access time
-    long int mtime;          // last change time
-    long int ctime;          // last change of access rights
-    ino_t ino;               // file serial number
-    int file_minor;
-    int file_major;
+    char *name;
+    char *print_name;
+    char *acl_inf;
+    char type;
+    char color;
+    unsigned short int mode;
+    long long int size;
+    unsigned int nlink;
+    char *uid_name;
+    char *gid_name;
+    int blksize;
+    long long int blocks;
+    long int atime;
+    long int mtime;
+    long int ctime;
+    ino_t ino;
 }              t_file;
 
 typedef struct s_l_data {
@@ -46,7 +44,6 @@ typedef struct s_main {
     char *flags;
     bool color;
     int files_count;
-    int file_n;
     int terminal_width;
     bool is_term;
 }              t_main;

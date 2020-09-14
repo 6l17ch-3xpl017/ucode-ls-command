@@ -8,7 +8,7 @@
 int get_arr_size(char **arr)
 {
     int count = 0;
-        for (int i = 0; arr[i]; i++)
+        for (int i = 1; arr[i]; i++)
             count++;
     return count;
 }
