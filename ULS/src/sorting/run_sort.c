@@ -65,6 +65,13 @@ void sort_S(t_file **files, int size)
                 temp_file = files[i];
                 files[i] = files[j];
                 files[j] = temp_file;
+            } else {
+                if (mx_strcmp(files[i]->print_name, files[i]->print_name) > 0)
+                {
+                    temp_file = files[i];
+                    files[i] = files[j];
+                    files[j] = temp_file;
+                }
             }
         }
     }
@@ -110,6 +117,13 @@ void sort_u(t_file **files, int size)
                 temp_file = files[i];
                 files[i] = files[j];
                 files[j] = temp_file;
+            } else {
+                if (mx_strcmp(files[i]->print_name, files[j]->print_name) > 0)
+                {
+                    temp_file = files[i];
+                    files[i] = files[j];
+                    files[j] = temp_file;
+                }
             }
         }
     }

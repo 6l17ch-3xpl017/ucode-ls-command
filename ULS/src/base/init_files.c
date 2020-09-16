@@ -18,7 +18,7 @@ char **init_files(int argc, char **argv)
         if (argv[i][0] != '-')
             break;
 
-    /* Add files to files array */ //ToDo: Check files after ':' logic
+    /* Add files to files array */ //ToDo: Check files after '--' logic
     for (int j = i; j < argc && argv[j][0] != '-'; j++)
         files[files_count++] = mx_strdup(argv[j]);
 

@@ -45,6 +45,7 @@ typedef struct s_main {
     t_file **files_struct;
     char *flags;
     bool color;
+    int str_size;
     int files_count;
     int terminal_width;
     bool is_term;

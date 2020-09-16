@@ -1,12 +1,12 @@
 #include "uls.h"
 
-static void print_total(t_file **files, int file_n) {
+static void print_total(t_file **files, int file_count) {
     long long int total = 0;
     char *print_total = NULL;
 
     if (*files != NULL) {
         mx_printstr("total ");
-        for (int i = 0; i < file_n; i++)
+        for (int i = 0; i < file_count; i++)
             total += files[i]->blocks;
 
         print_total = mx_itoa(total);

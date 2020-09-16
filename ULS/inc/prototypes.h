@@ -3,6 +3,9 @@
 
 #include "structures.h"
 
+#define LS_GID 0
+#define LS_UID 1
+
 #define LS_VALID_STR_ONE "&func_name: illegal option -- &invalflag \n"
 #define LS_VALID_STR_TWO "usage: &func_name  [-&val_flags]] [file ...]"
 #define LS_VALID_FLAGS "ACGRSTaclmrtu1"
@@ -40,6 +43,10 @@ void print_format_str(char *str, char local, char sym, int size);
 void print_format_l(t_file *file, t_main *main, int size);
 void maj_min_print(t_file *files);
 char *get_time_str(t_file *file, t_ls_l_data *print_struct);
+char *get_id_name(int st_id, int mode);
+void clean_struct(t_file ***arr);
+t_file **insert_lstat(char **main_files, t_main *main);
+ino_t get_ino_dev_fd(void);
 
 /* Parsers */
 t_file *get_lstat(const char *file);
@@ -58,5 +65,11 @@ void run_sort(t_file **files, char *flags, int size);
 /* Printers */
 void print_rights(t_file *files);
 void print_link_name(const char *file);
+void print_l(t_file **files, t_main *main);
+void print_C(t_file **files, t_main *main);
+void ls_print(t_file **files, t_main *main);
+
+/* Errors */
+void ls_error(t_error err, char *s);
 
 #endif //ULS_PROTOTYPES_H

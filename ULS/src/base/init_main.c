@@ -25,6 +25,7 @@ t_main *init_main(int argc, char **argv) {
     main->files_struct = malloc_struct_array(files_count);
     main->flags = flags;
     main->color = find_in_str(flags, 'G') ? isatty(1) ? true : false : false;
+    main->str_size = files_count;
     main->files_count = files_count;
     main->terminal_width = get_term_width();
     main->is_term = isatty(1) ? true : false;
