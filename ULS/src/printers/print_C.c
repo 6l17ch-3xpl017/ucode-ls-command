@@ -11,7 +11,7 @@ static int get_max_len(t_file **files) {
     return max_len;
 }
 
-void print_big_c(t_file **files, t_main *main) {
+void print_C(t_file **files, t_main *main) {
     int row = 8 * (get_max_len(files) / 8) + 8;
     int cols = main->terminal_width / row;
     int rows;

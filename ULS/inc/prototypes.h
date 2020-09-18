@@ -66,8 +66,8 @@ void run_sort(t_file **files, char *flags, int size);
 void print_rights(t_file *files);
 void print_link_name(const char *file);
 void print_l(t_file **files, t_main *main);
-void print_C(t_file **files, t_main *main);
 void ls_print(t_file **files, t_main *main);
+void print_C(t_file **files, t_main *main);
 
 /* Errors */
 void ls_error(t_error err, char *s);

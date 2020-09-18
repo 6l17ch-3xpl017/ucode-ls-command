@@ -9,12 +9,14 @@ void sort_base(t_file **files, int size)
 {
     t_file *temp_file;
 
-    for (int i = 0; i < size; ++i) {
-        for (int j = i; j < size; ++j) {
-            if (mx_strcmp(files[i]->print_name, files[j]->print_name) > 0) {
-                temp_file = files[i];
-                files[i] = files[j];
-                files[j] = temp_file;
+    if (files[0]){
+        for (int i = 0; i < size; ++i) {
+            for (int j = i; j < size; ++j) {
+                if (mx_strcmp(files[i]->print_name, files[j]->print_name) > 0) {
+                    temp_file = files[i];
+                    files[i] = files[j];
+                    files[j] = temp_file;
+                }
             }
         }
     }

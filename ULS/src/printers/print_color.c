@@ -59,13 +59,17 @@ static void print_color_tree(char type, char *name) {
 }
 
 void print_color(t_file *ls, bool status) {
-    char *name = valid_name(ls->print_name);
 
-    if (status == true) {
-        print_color_one(ls->type, name);
-        print_color_two(ls->type, name);
-        print_color_tree(ls->type, name);
-    } else
-        mx_printstr(name);
-    mx_strdel(&name);
+    if (ls != NULL) {
+
+        char *name = valid_name(ls->print_name);
+
+        if (status == true) {
+            print_color_one(ls->type, name);
+            print_color_two(ls->type, name);
+            print_color_tree(ls->type, name);
+        } else
+            mx_printstr(name);
+        mx_strdel(&name);
+    }
 }

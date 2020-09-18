@@ -14,4 +14,5 @@ int get_xattr(char *file) {
 //    mx_strdel(&l);
 //    mx_strdel(&link);
 //    return nbytes;
+    return 0;
 }
